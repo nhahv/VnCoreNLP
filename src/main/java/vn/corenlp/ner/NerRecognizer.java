@@ -7,7 +7,8 @@ import edu.emory.mathcs.nlp.component.template.lexicon.GlobalLexica;
 import edu.emory.mathcs.nlp.component.template.node.FeatMap;
 import edu.emory.mathcs.nlp.component.template.node.NLPNode;
 import edu.emory.mathcs.nlp.decode.NLPDecoder;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import vn.corenlp.wordsegmenter.Vocabulary;
 import vn.pipeline.LexicalInitializer;
 import vn.pipeline.Word;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class NerRecognizer {
     private NLPDecoder nlpDecoder ;
-    public final static Logger LOGGER = Logger.getLogger(NerRecognizer.class);
+    public final static Logger LOGGER = LoggerFactory.getLogger(NerRecognizer.class);
     private static NerRecognizer nerRecognizer;
     public static NerRecognizer initialize() throws IOException{
         if(nerRecognizer == null) {

@@ -2,7 +2,8 @@ package vn.pipeline;
 
 import edu.emory.mathcs.nlp.component.template.lexicon.GlobalLexica;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -20,7 +21,7 @@ public class LexicalInitializer {
     private boolean initLexica = false;
     private GlobalLexica globalLexica;
 
-    public final static Logger LOGGER = Logger.getLogger(LexicalInitializer.class);
+    public final static Logger LOGGER = LoggerFactory.getLogger(LexicalInitializer.class);
 
     public LexicalInitializer(boolean initLexica) throws IOException {
 

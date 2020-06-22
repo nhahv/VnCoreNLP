@@ -7,7 +7,8 @@ import edu.emory.mathcs.nlp.component.template.lexicon.GlobalLexica;
 import edu.emory.mathcs.nlp.component.template.node.FeatMap;
 import edu.emory.mathcs.nlp.component.template.node.NLPNode;
 import edu.emory.mathcs.nlp.decode.NLPDecoder;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import vn.pipeline.LexicalInitializer;
 import vn.pipeline.Word;
 
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class DependencyParser {
     private NLPDecoder nlpDecoder ;
-    public final static Logger LOGGER = Logger.getLogger(DependencyParser.class);
+    public final static Logger LOGGER = LoggerFactory.getLogger(DependencyParser.class);
     private static DependencyParser dependencyParser;
     public static DependencyParser initialize() throws IOException {
         if(dependencyParser == null) {

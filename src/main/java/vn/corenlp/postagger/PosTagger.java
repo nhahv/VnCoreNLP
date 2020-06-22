@@ -5,7 +5,8 @@ import marmot.morph.Sentence;
 import marmot.morph.Word;
 
 import marmot.util.FileUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +17,7 @@ import java.util.List;
 public class PosTagger {
     private static PosTagger posTagger = null;
     private MorphTagger tagger;
-    public final static Logger LOGGER = Logger.getLogger(PosTagger.class);
+    public final static Logger LOGGER = LoggerFactory.getLogger(PosTagger.class);
     public PosTagger() throws IOException {
         LOGGER.info("Loading POS Tagging model");
         String modelPath = System.getProperty("user.dir") + "/models/postagger/vi-tagger";
