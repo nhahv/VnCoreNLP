@@ -1,6 +1,8 @@
 package vn.corenlp.wordsegmenter;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -18,7 +20,7 @@ import java.util.List;
 public class WordSegmenter {
     private  Node root;
     private static WordSegmenter wordSegmenter = null;
-    public final static Logger LOGGER = Logger.getLogger(WordSegmenter.class);
+    public final static Logger LOGGER = LoggerFactory.getLogger(WordSegmenter.class);
     public WordSegmenter()
             throws IOException {
         LOGGER.info("Loading Word Segmentation model");

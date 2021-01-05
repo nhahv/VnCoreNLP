@@ -1,6 +1,7 @@
 package vn.pipeline;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import vn.corenlp.ner.NerRecognizer;
 import vn.corenlp.parser.DependencyParser;
 import vn.corenlp.postagger.PosTagger;
@@ -16,7 +17,7 @@ public class VnCoreNLP {
 
     private PosTagger posTagger;
 
-    public final static Logger LOGGER = Logger.getLogger(Annotation.class);
+    public final static Logger LOGGER = LoggerFactory.getLogger(Annotation.class);
 
     private WordSegmenter wordSegmenter;
     private NerRecognizer nerRecognizer;
